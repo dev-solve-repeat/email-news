@@ -4,12 +4,19 @@ from send_email import send_emails
 topic = "tesla"
 # f should be added to the line where change needs to be made.
 api_key = "3017c762b3f9426191584b31895aa972"
+# url = "https://newsapi.org/v2/everything?" \
+#       f"q={topic}&" \
+#       "from=2022-11-20&" \
+#       "sortBy=publishedAt&" \
+#       "apiKey=3017c762b3f9426191584b31895aa972&" \
+#       "language=en" # for selecting the language
+
 url = "https://newsapi.org/v2/everything?" \
       f"q={topic}&" \
-      "from=2022-11-20&" \
+      "from=2022-11-21&" \
       "sortBy=publishedAt&" \
-      "apiKey=3017c762b3f9426191584b31895aa972&" \
-      "language=en" # for selecting the language
+      f"apiKey={api_key}&" \
+      "language=en"
 
 # Get the request from the url
 request = requests.get(url)
